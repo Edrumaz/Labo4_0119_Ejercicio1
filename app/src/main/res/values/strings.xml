@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Labo4_0119_Ejercicio1</string>
+    <string name="movie_name">Nombre de Pelicula</string>
+    <string name="movie_title">Titulo</string>
+    <string name="rate_ex">Puntuacion</string>
+    <string name="lorem_30">Lorem ipsum</string>
+    <string name="runtime_ex">Runtime</string>
+</resources>
