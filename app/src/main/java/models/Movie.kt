@@ -12,7 +12,7 @@ class Movie (
     val Actors:String = "N/A",
     val Plot:String = "N/A",
     val Language:String = "N/A",
-    val imdbRAting:String = "N/A",
+    val imdbRating:String = "N/A",
     val Poster:String = "N/A"
 ) : Parcelable{
 
@@ -26,7 +26,7 @@ class Movie (
         Actors = parcel.readString(),
         Plot = parcel.readString(),
         Language = parcel.readString(),
-        imdbRAting = parcel.readString(),
+        imdbRating = parcel.readString(),
         Poster = parcel.readString()
     ) {
     }
@@ -41,7 +41,7 @@ class Movie (
         parcel.writeString(Actors)
         parcel.writeString(Plot)
         parcel.writeString(Language)
-        parcel.writeString(imdbRAting)
+        parcel.writeString(imdbRating)
         parcel.writeString(Poster)
     }
 

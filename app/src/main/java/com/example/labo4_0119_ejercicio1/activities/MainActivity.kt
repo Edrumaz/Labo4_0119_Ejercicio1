@@ -1,8 +1,10 @@
 package com.example.labo4_0119_ejercicio1.activities
 
+import adapters.MovieAdapter
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.labo4_0119_ejercicio1.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
@@ -14,9 +16,36 @@ import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
+    private var movieList : ArrayList<Movie> = ArrayList()
+    private lateinit var movieAdapter: MovieAdapter;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+
+
+    fun initRecyclerView(){
+        var viewManager = LinearLayoutManager(this)
+        movieAdapter = MovieAdapter(movieList)
+
+
+        movie_list_rv.apply {
+
+        }
+    }
+
+    fun initSearchBar() = add_movie_btn.setOnClickListener{
+        if(!movie_name_et.text.isEmpty()){
+            FetchMovie().execute(movie_name_et.text.toString())
+        }
+    }
+
+    fun addMovieToList(movie:Movie){
+        movieList.add(movie)
+        movieAdapter = MovieAdapter(movieList)
+
     }
 
     private inner class FetchMovie : AsyncTask<String, Void, String>(){

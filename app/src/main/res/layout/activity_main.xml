@@ -18,19 +18,20 @@
             android:orientation="horizontal">
 
         <EditText
-                android:id="@+id/et_name"
+                android:id="@+id/movie_name_et"
                 android:layout_width="0dp"
-                android:hint="@string/movie_name"
+                android:hint="Titulo"
                 android:layout_height="wrap_content"
                 android:layout_weight="3" />
 
         <Button
-                android:id="@+id/btn_add"
+                android:id="@+id/add_movie_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Add"
         />
+
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
@@ -40,3 +41,4 @@
             android:layout_weight="8" />
 
 </LinearLayout>
+                
